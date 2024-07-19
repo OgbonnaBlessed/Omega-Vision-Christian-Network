@@ -1,0 +1,38 @@
+header {
+    background-color: rgb(45, 171, 230);
+    box-shadow: 2px 5px 5px 10px rgba(45, 171, 230, 0.6);
+}
+
+.head {
+    position: fixed;
+    z-index: 100;
+}
+
+section {
+    margin-top: 15rem;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+section h1 {
+    font-size: 7rem;
+    margin-bottom: 0;
+}
+
+section p {
+    font-size: 3rem;
+    margin-top: 3rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* @media (max-width: 768px) {
+    nav .logo-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+} */
