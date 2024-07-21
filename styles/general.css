@@ -153,7 +153,8 @@ nav {
 
 .nav-list li {
     line-height: 8rem;
-    position: relative
+    position: relative;
+    margin-right: 10px;
 }
 
 .sub-menu li {
@@ -189,7 +190,7 @@ nav {
 }
 
 .sub-menu {
-    min-width: 160px;
+    width: 170px;
     display: none;
     position: absolute;
     border-top: 3px solid var(--main-color);
@@ -199,6 +200,7 @@ nav {
     transition: all 250ms ease;
     margin: 0;
     padding: 0;
+    border-radius: 8px;
 }
 
 .sub-menu::before {
