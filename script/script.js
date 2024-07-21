@@ -13,6 +13,69 @@ document.onclick = function(e){
     }
 };
 
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+
+function showSlide(index) {
+    items.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % items.length;
+    showSlide(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showSlide(currentIndex);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentIndex);
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleSubMenuLinks = document.querySelectorAll('.toggle-sub-menu');
+    let currentOpenSubMenu = null;
+
+    toggleSubMenuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const subMenu = this.nextElementSibling;
+            const icon = this.querySelector('i');
+
+            if (subMenu === currentOpenSubMenu) {
+                subMenu.style.display = 'none';
+                icon.classList.remove('rotate');
+                currentOpenSubMenu = null;
+            } else {
+                if (currentOpenSubMenu) {
+                    currentOpenSubMenu.style.display = 'none';
+                    const openIcon = currentOpenSubMenu.previousElementSibling.querySelector('i');
+                    openIcon.classList.remove('rotate');
+                }
+                subMenu.style.display = 'block';
+                icon.classList.add('rotate');
+                currentOpenSubMenu = subMenu;
+            }
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.nav-list')) {
+            if (currentOpenSubMenu) {
+                currentOpenSubMenu.style.display = 'none';
+                const icon = currentOpenSubMenu.previousElementSibling.querySelector('i');
+                icon.classList.remove('rotate');
+                currentOpenSubMenu = null;
+            }
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     var modal = document.getElementById('newsletterModal');
     var closeModalIcon = document.getElementById('closeModal');
@@ -58,8 +121,35 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email);
     }
     
-})
+});
 
+const navShortcut = document.getElementById('navShortcut');
+const navbar = document.getElementById('navbar');
+const navbarHeight = navbar.offsetHeight;
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > navbarHeight) {
+        navShortcut.style.display = 'block';
+    } else {
+        navShortcut.style.display = 'none';
+    }
+});
+
+function scrollToNavbar() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Optional: To hide the shortcut button when it gets close to the navbar
+window.addEventListener('scroll', () => {
+    if (window.scrollY < navbarHeight) {
+        navShortcut.style.display = 'none';
+    } else {
+        navShortcut.style.display = 'block';
+    }
+});
 
 ScrollReveal({ 
     reset: false,
@@ -85,11 +175,3 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message));
 });
-
-// const typed = new Typed('.multiple-text', {
-    //     strings: ['Welcome to Omega Vision Christian Network, the Adullam of destiny.', 'We are a family of Love.', 'The Love of the Father compels us.'],
-//     typeSpeed: 30,
-//     backSpeed: 50,
-//     backDelay: 1000,
-//     loop: false
-// });

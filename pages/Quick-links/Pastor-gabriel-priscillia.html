@@ -16,7 +16,7 @@
 <body>
     <header class="head">
         <div class="container">
-            <nav>
+            <nav id="navbar">
                 <div class="logo-container">
                     <div class="logo">
                         <img src="/images/omega_logo.png" alt="">
@@ -36,7 +36,7 @@
                         <a href="/index.html">Home</a>
                     </li>
                     <li>
-                        <a href="#">About us <i class="fas fa-caret-down"></i></a>
+                        <a href="#" class="toggle-sub-menu">About us <i class="fas fa-caret-down"></i></a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="../About-us/our-history.html">Our History</a>
@@ -56,7 +56,7 @@
                         <a href="../partnership.html">Partnership</a>
                     </li>
                     <li>
-                        <a href="#">Quick links
+                        <a href="#" class="toggle-sub-menu">Quick links
                             <i class="fas fa-caret-down"></i>
                         </a>
                         <ul class="sub-menu">
@@ -81,7 +81,7 @@
                         <a href="../sermons.html">Sermons</a>
                     </li>
                     <li>
-                        <a href="#">What we do 
+                        <a href="#" class="toggle-sub-menu">What we do 
                             <i class="fas fa-caret-down"></i>
                         </a>
                         <ul class="sub-menu">
@@ -98,6 +98,20 @@
             </nav>
         </div>
     </header>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/index/image1.jpeg" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/index/image2.jpeg" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/index/image3.jpeg" alt="Slide 3">
+            </div>
+        </div>
+    </div>
 
     <section>
         <h1>Dr. Pastor Gabriel Priscillia</h1>
@@ -146,6 +160,10 @@
         </div>
         </p>
     </section>
+
+    <button id="navShortcut" class="nav-shortcut" onclick="scrollToNavbar()">
+        <i class='bx bxs-chevrons-up'></i>
+    </button>
 
     <footer>
         <div class="container">

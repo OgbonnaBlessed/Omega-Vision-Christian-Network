@@ -9,7 +9,7 @@ header {
 }
 
 section {
-    margin-top: 15rem;
+    margin-top: 5rem;
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -29,10 +29,65 @@ section p {
     font-style: italic;
 }
 
-/* @media (max-width: 768px) {
-    nav .logo-container {
-        position: absolute;
-        left: 0;
-        right: 0;
-    }
-} */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14rem;
+    border-radius: 15px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.nav-shortcut {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.nav-shortcut i {
+    font-size: 18px;
+}
