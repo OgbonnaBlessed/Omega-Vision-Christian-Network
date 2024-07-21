@@ -29,6 +29,85 @@ section p {
     font-style: italic;
 }
 
+.sub-title {
+    font-size: 4rem;
+    margin-bottom: -2.5rem;
+    margin-top: 4rem;
+}
+
+.same-title {
+    font-size: 10rem;
+    margin-top: 4rem;
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+footer .container {
+    padding-top: 1rem;
+    margin-bottom: -10px;
+}
+
+.box-icons a,
+.follow-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid rgb(45, 171, 230);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: rgb(45, 171, 230);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.follow-icons a:hover {
+    background: rgb(45, 171, 230);
+    color: white;
+    box-shadow: 0 0 1rem rgb(45, 171, 230);
+}
+
+.box-icons a:hover {
+    background: rgb(45, 171, 230);
+    color: black;
+    box-shadow: 0 0 1rem rgb(45, 171, 230);
+}
+
+.sermon-container {
+    width: 100%;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.sermon-box {
+    background-color: rgb(240, 248, 255);
+    color: black;
+    text-align: center;
+    border-radius: 8px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                0 -4px 8px rgba(0, 0, 0, 0.1),
+                4px 0 8px rgba(0, 0, 0, 0.1),
+                -4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sermon-box img {
+    border-radius: 8px;
+}
+
 .carousel {
     position: relative;
     width: 100%;
@@ -40,6 +119,7 @@ section p {
     justify-content: center;
     margin-top: 14rem;
     border-radius: 15px;
+    z-index: 90;
 }
 
 .carousel-inner {
@@ -86,8 +166,107 @@ section p {
     cursor: pointer;
     display: none;
     z-index: 1000;
+    transition: all .5s ease-in-out;
 }
 
 .nav-shortcut i {
     font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 20vh;
+        border-radius: 5px;
+        margin-top: 13rem;
+    }
+
+    section {
+        margin-top: 1.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    section h1 {
+        font-size: 5rem;
+    }
+
+    section p {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .sub-title {
+        font-size: 2rem;
+        margin-bottom: -2.5rem;
+        margin-top: 4rem;
+    }
+    
+    .same-title {
+        font-size: 5rem;
+        margin-top: 2rem;
+    }
+    
+    footer {
+        width: 100%;
+        background-color: rgb(10, 10, 10);
+        color: white;
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
+    }
+    
+    footer .container {
+        padding-top: 0.2rem;
+        margin-bottom: -5px;
+    }
+    
+    .box-icons a,
+    .follow-icons a {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: .05rem solid rgb(45, 171, 230);
+        border-radius: 50%;
+        font-size: 0.8rem;
+        color: rgb(45, 171, 230);
+        margin: 1.2rem .5rem 1.2rem 0;
+        transition: .5s ease;
+    }
+    
+    .follow-icons a:hover {
+        background: rgb(45, 171, 230);
+        color: white;
+        box-shadow: 0 0 1rem rgb(45, 171, 230);
+    }
+    
+    .box-icons a:hover {
+        background: rgb(45, 171, 230);
+        color: black;
+        box-shadow: 0 0 1rem rgb(45, 171, 230);
+    }
+    
+    .sermon-container {
+        width: 100%;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .sermon-box {
+        background-color: rgb(240, 248, 255);
+        color: black;
+        text-align: center;
+        border-radius: 8px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                    0 -4px 8px rgba(0, 0, 0, 0.1),
+                    4px 0 8px rgba(0, 0, 0, 0.1),
+                    -4px 0 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sermon-box img {
+        border-radius: 8px;
+    }
 }

@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             messageDiv.innerHTML = '<p class="success-message">You will now start receiving our newsletters.</p>';
             // Clear input field
             emailInput.value = '';
+            setTimeout(closeModal, 2000);
             // Move email to Google Sheets
             addToGoogleSheet(emailAddress);
         } else {
