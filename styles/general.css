@@ -297,8 +297,15 @@ footer .container {
                 -4px 0 8px rgba(0, 0, 0, 0.1);
 }
 
+.sermon-box h2 {
+    font-size: 2rem;
+    margin: 0.8rem 0;
+}
+
 .sermon-box img {
     border-radius: 8px;
+    width: 70%;
+    height: 65%;
 }
 
 .contact {
