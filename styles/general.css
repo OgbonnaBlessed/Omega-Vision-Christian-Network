@@ -298,14 +298,14 @@ footer .container {
 }
 
 .sermon-box h2 {
-    font-size: 2rem;
-    margin: 0.8rem 0;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
 }
 
 .sermon-box img {
     border-radius: 8px;
     width: 70%;
-    height: 65%;
+    height: 60%;
 }
 
 .contact {
@@ -406,6 +406,7 @@ footer .container {
 
 .modal .container img {
     border-radius: 10px;
+    width: 30%;
 }
 
 .modal .container .newsletter input {
